@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, jsonify, render_template, request
 import sqlite3
 app = Flask(__name__)
 
@@ -29,3 +29,24 @@ def addfood():
 	finally:	
 		return render_template('result.html',message=message)
 		connection.close()
+
+
+##### EXTRA CREDIT #####
+@app.route('/favorite')
+def favorite():
+	connection=sqlite3.connect('database.db')
+	cursor=connection.cursor()
+	try:
+		cursor.execute('SELECT * FROM foods Where name="mango"')
+		connection.commit()
+		result = cursor.fetchone()
+		print ('try this');
+	except:
+		result = ('Database error')
+		print ('except this');
+	finally:
+		return jsonify(result)
+		print ('finally this');
+		connection.close()
+
+
