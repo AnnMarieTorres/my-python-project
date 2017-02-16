@@ -40,13 +40,42 @@ def favorite():
 		cursor.execute('SELECT * FROM foods Where name="mango"')
 		connection.commit()
 		result = cursor.fetchone()
-		print ('try this');
 	except:
 		result = ('Database error')
-		print ('except this');
 	finally:
 		return jsonify(result)
-		print ('finally this');
 		connection.close()
+
+
+@app.route('/search')
+def search():
+	conn = sqlite3.connect('database.db')
+	cur=conn.cursor()
+	try:
+		name = (request.args.get('name'),)
+		cur.execute('SELECT * FROM foods WHERE name=?',name)
+		conn.commit()
+		result = cur.fetchall()
+	except:
+		result =('Database Error')
+	finally:
+		return jsonify(result)
+		conn.close()
+
+
+@app.route('/drop')
+def drop():
+	conn = sqlite3.connect('database.db')
+	cur=conn.cursor()
+	try:
+		cur.execute('DROP TABLE foods')
+		conn.commit()
+		result=('table dropped')
+	except:
+		conn.rollback()
+		result=('Database Error')
+	finally:
+		return render_template('result.html',message=result)
+		conn.close()
 
 

@@ -8,6 +8,7 @@
 <h1>Food Database</h1>
 <h3><a href="/enternew">Add Food</a></h3>
 <h3><a href="/favorite">Get Mango</a></h3>
+<h3><a href="/drop">drop table</a></h3>
 <br>
 <br>
 <br>
@@ -23,6 +24,11 @@
     <li>Interviewing strategies, resume writing, and how to leverage social media and other online resources to help you find the right job</li>
     <li>Long-term career strategies and how to position yourself to not just find a job but to create a successful and lucrative career as a software engineer</li>
 </ul>
+<form action="{{ url_for('search') }}" method="GET">
+    <h3>Search</h3>
+    <input type="text" name="name" />
+    <input type="submit" />
+</form>
 <h4>For more information click <a href="https://lambdaschool.com">HERE</a>.</h4>
 </body>
 </html>
