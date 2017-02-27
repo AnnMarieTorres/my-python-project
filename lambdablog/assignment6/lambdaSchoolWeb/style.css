@@ -1,9 +1,12 @@
-
+html{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 100;
+}
 header{
 	background-color: rgba(12,8,7,0.5);
 	height: 95px;
 	width: 100%;
-	font-weight: 100;
+	font-weight: lighter;
 	color: white;
 	display: flex;
 	flex-direction: row;
@@ -33,7 +36,7 @@ header .navBar{
 }
 .navBar button{
 	font-size: 15px;
-	font-weight: 200;
+	font-weight: 100;
 	margin-left: 20px;
 	background-color: rgba(52,152,219,1);
 	padding: 15px 6px 15px 6px;
@@ -46,6 +49,7 @@ header .navBar{
 	position: center;
 	background-size: cover;
 	z-index: -1;
+	filter: brightness(50%);
 }
 .banner{
 	position: absolute;
@@ -62,18 +66,120 @@ header .navBar{
 }
 .banner p{
 	width: 110%;
-	font-size: 28px;
+	font-size: 25px;
+	font-weight: lighter;
 	text-align: center;
 	margin-top: -30px;
 }
 .banner button{
 	background-color: transparent;
-	font-size: 14px;
-	font-weight: 200;
-	padding: 10px 7px 10px 7px;
+	font-size: 18px;
+	font-weight: 100;
+	padding: 8px 7px 8px 7px;
 	border: white solid 1px;
 	color: white;
 	position: relative;
 	left: 50%;
 }
+.description {
+	display: flex;
+	flex-direction: row;
+	width: 92%;
+	height: auto;
+	margin-left: 65px;
+	margin-right: 70px;
+	
 
+}
+.description hr{
+	width: 85px;
+	margin-left: 0;
+}
+.description .words{
+	line-height: 22px;
+	padding: 0px 0px 0px 0px;
+}
+
+.description button{
+	background-color: #3498db;
+	color: white;
+	font-size: 16px;
+	padding: 10px 18px 10px 18px;
+}
+/*purple #9b6bcc*/
+/*red #e74c3c*/
+/*blue #3498db*/
+/*500x430*/
+.boxes{
+	display: flex;
+	flex-direction: row;
+	
+	margin-top: 100px;
+	font-weight: lightest;
+}
+.boxes .purpleBox{
+	background-color: #9b6bcc;
+	color: white;
+	text-align: center;
+	width: 430px;
+	height: 500px;
+	margin-left: 0px 0px 0px -10px;
+
+}
+.boxes .purpleBox h2{
+	margin: 80px 10px 0px 10px;
+}
+.boxes .purpleBox h5, p{
+	margin: 10px 10px 0px 10px;
+	line-height: 30px;
+}
+.boxes .purpleBox button{
+	background-color: transparent;
+	border: 2px solid white;
+	color: white;
+	padding: 8px 10px 8px 10px;
+	font-size: 12px;
+}
+.boxes .redBox{
+	background-color: #e74c3c;
+	color: white;
+	width: 430px;
+	height: 500px;
+	text-align: center;
+}
+.boxes .redBox h2{
+	margin: 80px 10px 0px 10px;
+}
+.boxes .redBox h5, p{
+	margin: 10px 10px 0px 10px;
+	line-height: 30px;
+}
+.boxes .redBox button{
+	background-color: transparent;
+	border: 2px solid white;
+	color: white;
+	padding: 8px 10px 8px 10px;
+	font-size: 12px;
+}
+.boxes .blueBox{
+	background-color: #3498db;
+	color: white;
+	width: 430px;
+	height: 500px;
+	text-align: center;
+	margin-right: -10px;
+}
+.boxes .blueBox h2{
+	margin: 80px 10px 0px 10px;
+}
+.boxes .blueBox h5, p{
+	margin: 10px 10px 0px 10px;
+	line-height: 30px;
+}
+.boxes .blueBox button{
+	background-color: transparent;
+	border: 2px solid white;
+	color: white;
+	padding: 8px 10px 8px 10px;
+	font-size: 12px;
+}
